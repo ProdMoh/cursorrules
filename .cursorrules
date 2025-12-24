@@ -1,0 +1,271 @@
+# Governance Configuration: prodmoh enhancement to build no code workflow builder
+
+## 1. Global Project Context (The "Truth")
+**Author:** ProdMoh
+
+**Author:** ProdMoh
+
+### 1. Product Description, Objectives & OKRs
+**Product Description:**
+The ProdMoh Extension enhancement is an AI-native, no-code workflow builder designed to eliminate the "technical tax" of automation. Unlike traditional platforms that require manual API configuration, logic mapping, and credential management, ProdMoh uses a chat-based interface to translate natural language intent into functional, automated sequences. It leverages agentic AI to handle cross-app authentication and execution behind the scenes, allowing users to build, test, and iterate on complex workflows within minutes.
+
+**Objectives:**
+*   **Democratize Automation:** Enable non-technical product and operations roles to build enterprise-grade workflows without writing code or managing API keys.
+*   **Reduce Time-to-Value (TTV):** Shorten the gap between identifying a manual bottleneck and deploying an automated solution from hours to minutes.
+*   **Frictionless Iteration:** Provide a conversational loop where users can refine logic through dialogue rather than re-configuring nodes.
+
+**OKRs:**
+*   **Objective 1: Rapid Adoption of AI-Built Workflows**
+    *   **KR1:** Achieve a 40% "First-Time Success Rate" (users who deploy a functional workflow within 5 minutes of their first chat).
+    *   **KR2:** Increase the average number of active workflows per user from 1.2 to 4.5 within the first 90 days.
+*   **Objective 2: High Reliability and User Trust**
+    *   **KR1:** Maintain a workflow execution success rate of >98.5%.
+    *   **KR2:** Reduce "Manual Intervention Rate" (users needing to fix logic via manual override) to under 15%.
+
+**Aha Insight:**
+The bottleneck in automation isn't the *logic*; it's the *plumbing* (APIs, Webhooks, Auth). By abstracting the plumbing into an invisible agentic layer, we transform automation from a "project" into a "thought."
+
+---
+
+### 2. Product Vision & Strategy
+**Vision:**
+To become the primary "operating system for intent," where any professional can command their digital environment through natural conversation, making manual repetitive tasks obsolete.
+
+**Strategy:**
+Our strategy focuses on **"Zero-Entry Automation."** We are moving away from the "Lego-block" builder model (Zapier/Make) toward a "Concierge" model. 
+1.  **Integration via Proxy:** Instead of asking users for API keys, the extension leverages existing browser sessions and secure proxy connectors to act on the user's behalf.
+2.  **Conversational Refinement:** We treat workflow building as a collaborative dialogue. If a workflow fails or needs a change, the user simply tells the AI what went wrong, and the AI re-wires the logic.
+3.  **Contextual Awareness:** The extension "sees" what the user is working on (e.g., a PRD in Notion or a ticket in Jira) and suggests relevant automations proactively.
+
+**Aha Insight:**
+The future of "No-Code" is "No-UI." The most powerful workflow builder is a chat box that understands your business context better than you understand the underlying API documentation.
+
+---
+
+### 3. Hypothesis
+**Core Product Hypothesis:**
+By replacing the traditional drag-and-drop canvas with an agentic chat interface and removing the need for manual API key management, we will increase the automation adoption rate among non-technical managers by 300% because we eliminate the two primary psychological barriers: "Technical Intimidation" and "Configuration Fatigue."
+
+**Sub-Hypotheses:**
+1.  **Iterative Correction:** Allowing users to modify workflows via chat (e.g., "Actually, send this to Slack only if the priority is High") will increase long-term retention by 50% compared to manual node editing.
+2.  **Zero-Auth Onboarding:** Eliminating API key entry in favor of browser-session-based authentication will reduce drop-off during the "Setup" phase by 80%.
+3.  **Contextual Suggestions:** Proposing workflows based on the active browser tab will drive a 25% increase in "Discovery-led" automations.
+
+**Why This Matters Now:**
+The "Great Fragmentation" of SaaS tools has reached a breaking point where managers spend more time moving data between tools than doing strategic work. Simultaneously, LLMs have reached the reasoning maturity required to handle "Agentic Workflows"—moving from just *writing* text to *executing* actions.
+
+**Aha Insight:**
+The "Blank Canvas" is the enemy of productivity. Users don't want a builder; they want a result. Starting with a conversation ensures the user never faces a blank screen.
+
+---
+
+### 4. 3C Analysis
+**Customer:**
+1.  **The Overwhelmed PM:** Needs to sync feedback from 5 sources into a roadmap. JTBD: "Ensure no customer voice is lost without spending 4 hours a week on copy-pasting."
+2.  **The Ops Lead:** Needs to bridge legacy tools with new stacks. JTBD: "Create a seamless data flow without waiting 3 months for an engineering sprint."
+3.  **The Solo Founder:** Needs to act as a 10-person team. JTBD: "Automate lead gen and outreach so I can focus on product-market fit."
+
+**Company (ProdMoh):**
+*   **Strengths:** Deep expertise in AI-driven product management workflows; existing extension user base; proprietary prompt-to-action mapping engine.
+*   **Weaknesses:** Smaller engineering team compared to incumbents; reliance on browser-based execution which can be brittle if site UIs change.
+
+**Competition:**
+*   **Direct (Zapier/Make):** High power, but high complexity. They require users to understand "If-This-Then-That" logic and API structures.
+*   **Indirect (Rewind/browser AI agents):** Good at recording/summarizing, but weak at structured, recurring workflow execution.
+*   **Market White Space:** There is a massive gap for a tool that is "Smarter than a macro, but simpler than a developer tool."
+
+**Competitive Advantage Statement:**
+ProdMoh wins by being the only tool that requires **zero** configuration knowledge. We don't sell a "builder"; we sell an "automated assistant" that configures itself.
+
+**Aha Insight:**
+Incumbents are trapped by their "Canvas" UI. They cannot simplify without alienating their power users. ProdMoh’s "Chat-First" approach is a disruptive architecture that incumbents cannot easily copy.
+
+---
+
+### 5. Target Audience
+1.  **Persona: "Strategic Sarah" (Senior PM)**
+    *   **Use Case:** Sarah is reviewing a long Slack thread about a bug. She triggers ProdMoh: "Summarize this thread, create a Jira ticket, and link the original Slack message."
+2.  **Persona: "Operational Oscar" (Sales Ops)**
+    *   **Use Case:** Oscar wants to enrich leads. "Whenever a new lead hits this Google Sheet, find their LinkedIn profile, check their latest post, and draft a personalized intro in my CRM."
+3.  **Persona: "Founder Felix" (Early-stage Startup)**
+    *   **Use Case:** Felix needs to track competitors. "Every morning, check these 3 websites for pricing changes. If a price drops, email me a summary and update my 'Market Research' Notion page."
+
+---
+
+### 6. Features Table
+| Feature | Priority | Pain Point | Description |
+| :--- | :--- | :--- | :--- |
+| **Conversational Builder** | P0 | Complexity | Chat interface to describe and build workflows in plain English. |
+| **Zero-Key Auth** | P0 | Technical Tax | Uses browser sessions/OAuth to connect apps without manual API keys. |
+| **Agentic Execution** | P0 | Logic Errors | AI that "reasons" through multi-step tasks and handles edge cases. |
+| **Live Preview Mode** | P1 | Lack of Trust | Step-by-step visual simulation of the workflow before it goes live. |
+| **Natural Language Edits** | P1 | Rigid UI | Modify existing workflows by chatting (e.g., "Add a delay of 2 hours"). |
+| **Contextual Triggers** | P1 | Discovery | Suggests automations based on the website the user is currently visiting. |
+| **Error Auto-Heal** | P2 | Maintenance | AI detects a broken link/API change and suggests a fix automatically. |
+| **Workflow Templates** | P2 | Blank Canvas | One-click library for common PM/Ops tasks (e.g., "PRD to Jira"). |
+| **Multi-App Sync** | P1 | Siloed Data | Ability to chain >3 apps in a single conversational command. |
+| **Human-in-the-loop** | P2 | Security/Risk | Optional "Pause for Approval" step for sensitive actions (e.g., sending emails). |
+| **Usage Analytics** | P3 | ROI Visibility | Dashboard showing time saved and successful executions. |
+| **Version History** | P3 | Fear of Breaking | Roll back to previous versions of a workflow via chat command. |
+
+---
+
+### 7. Success Metrics & KPIs
+**Leading Indicators:**
+1.  **Time to First Activation (TTFA):**
+    *   **Unit:** Minutes.
+    *   **Target:** < 4 minutes.
+    *   **Why:** High correlation between rapid TTV and long-term retention.
+2.  **Chat-to-Workflow Conversion:**
+    *   **Formula:** (Workflows Deployed / Total Chat Sessions) * 100.
+    *   **Target:** 30% per month.
+    *   **Why:** Measures the effectiveness of the AI in understanding user intent.
+3.  **Daily Active Builders (DAB):**
+    *   **Unit:** Count of unique users interacting with the builder.
+    *   **Target:** 20% of total extension users.
+    *   **Why:** Indicates the tool is becoming a daily habit, not a one-off setup.
+
+**Lagging Indicators:**
+4.  **Workflow Success Rate:**
+    *   **Formula:** (Successful Executions / Total Executions) * 100.
+    *   **Target:** 98.5% per quarter.
+    *   **Why:** Critical for trust; if it breaks, users leave.
+5.  **Net Retention Rate (NRR):**
+    *   **Unit:** Percentage.
+    *   **Target:** 115% annually.
+    *   **Why:** Measures if users are expanding their usage and finding more value over time.
+6.  **Estimated Hours Saved:**
+    *   **Formula:** (Successful Executions * Manual Task Time Constant).
+    *   **Target:** 10 hours/user/month.
+    *   **Why:** The ultimate value proposition and marketing "hook."
+
+**Aha Insight:**
+Success isn't just "workflows built"; it's "workflows *edited*." A user who iterates on a workflow via chat has reached a level of "conversational fluency" that makes the product indispensable.
+
+---
+
+### 8. Functional Requirements
+*   The system must parse natural language and map it to a structured JSON workflow schema.
+*   The extension must detect active browser sessions to facilitate "Zero-Key" authentication for supported apps (G-Suite, Slack, Jira, Notion).
+*   The builder must support conditional logic (If/Then) and loops (For Each) via chat commands.
+*   Users must be able to "Undo" or "Modify" any step of the workflow through the chat interface.
+*   The system must provide a "Test Run" feature that executes the workflow with dummy data.
+*   Workflows must be able to run in the background (server-side) once deployed, even if the browser is closed.
+*   The UI must include a "Log" view showing the history of all automated actions and their status.
+*   The system must support "Variable Mapping" (e.g., taking a name from an email and putting it into a CRM field) automatically.
+*   The extension must provide a "Safety Toggle" to require manual confirmation before any "Write" action.
+*   The system must support at least 50 third-party integrations at launch.
+
+---
+
+### 9. Non-Functional Requirements
+*   **Latency:** Chat responses and workflow generation must occur in < 3 seconds.
+*   **Security:** All user credentials and session tokens must be encrypted using AES-256; no plain-text passwords stored.
+*   **Scalability:** The backend must support 100,000 concurrent workflow executions without performance degradation.
+*   **Reliability:** The system must have 99.9% uptime to ensure business-critical automations do not fail.
+*   **Privacy:** The AI must not use sensitive user data (PII) from workflow executions for model training without explicit opt-in.
+
+---
+
+### 10. User Stories
+1.  As a PM, I want to describe a workflow in plain English so that I don't have to learn how to use a complex automation tool.
+2.  As an Ops Lead, I want to connect my Slack to my Notion without hunting for API keys so that I can start automating immediately.
+3.  As a user, I want to see a preview of what the AI is about to do so that I can feel confident it won't send incorrect data.
+4.  As a busy founder, I want the extension to suggest automations based on my current task so that I can discover new ways to save time.
+5.  As a non-technical user, I want to fix a broken workflow by telling the AI "This isn't working, try X instead" so that I don't have to debug code.
+6.  As a manager, I want to set a "Human-in-the-loop" check for Slack messages so that I can review AI-generated content before it goes to the team.
+7.  As a power user, I want to chain multiple apps together (e.g., Email -> GPT -> Jira -> Slack) in one command to handle complex processes.
+8.  As a security-conscious user, I want to know exactly what permissions the extension is using so that I can ensure data compliance.
+9.  As a user, I want my workflows to run even when my computer is off so that my business processes are truly automated.
+10. As a team lead, I want to see a report of how many hours my team has saved so that I can justify the ROI of the tool.
+
+---
+
+### 11. Strategic Insight
+The true disruption isn't "No-Code"—it's "No-Configuration." By moving the complexity from the user's brain to the AI's reasoning engine, ProdMoh turns every employee into a developer, effectively collapsing the cost of custom software to zero.
+
+## 2. Technical Governance & Standards
+
+
+### Architectural Pattern: Layered (N-Tier) Architecture
+
+**Layer Structure (Top to Bottom):**
+1. **Presentation Layer**: UI, API controllers
+2. **Business Logic Layer**: Services, use cases, validations
+3. **Data Access Layer**: Repositories, ORM, database queries
+4. **Database Layer**: Actual data storage
+
+**File Organization:**
+```
+/src
+  /presentation   # Controllers, middlewares, views
+  /business       # Services, business rules
+  /data           # Repositories, models, migrations
+```
+
+**Rules:**
+- Each layer only calls the layer directly below it
+- No skipping layers (presentation NEVER calls data directly)
+- Use DTOs to transfer data between layers
+- Keep layers loosely coupled via interfaces
+
+### Security Framework: HIPAA + OWASP (Healthcare)
+**HIPAA Safeguards:**
+- All PHI encrypted at rest (AES-256) and in transit (TLS 1.3)
+- RBAC with minimum necessary access principle
+- Audit logs for ALL PHI access (who, when, what, action)
+- Session timeout: 15 minutes inactivity
+- No shared accounts—unique user identification required
+
+**OWASP Top 10 Protections:**
+- Input validation to prevent injection attacks
+- Secure authentication with MFA for PHI access
+- XSS protection via output encoding
+- CSRF tokens on all state-changing operations
+- No sensitive data in URLs or logs
+
+
+
+### Logging Standard: Audit Trail (Compliance)
+**CRITICAL: All sensitive operations MUST be logged**
+- **WHO**: User ID, role, IP address
+- **WHAT**: Action performed, resource affected
+- **WHEN**: Timestamp (ISO 8601 with timezone)
+- **RESULT**: Success/failure, error details
+- **IMMUTABLE**: Logs must be append-only, tamper-evident
+- **RETENTION**: Minimum 1 year for compliance audits
+- **ACCESS**: Logs readable only by authorized personnel
+
+
+### Testing Strategy: Full Stack (Unit + Integration + E2E)
+
+**Output Requirements:**
+- Unit tests for core logic
+- Integration tests for API/DB layer
+- E2E tests for critical user flows (using Playwright/Cypress)
+
+## 3. Strict Implementation Guidelines
+
+### A. Observability & Debugging
+- **Inline Comments**: ADD detailed comments for complex logic.
+- **Logging**: Structural logging at function entry/exit.
+- **Error Handling**: Use established patterns.
+
+### B. Security & Privacy (ProdMoh Policy)
+- **PII Handling**: NEVER log Sensitive PII in plain text.
+- **Data Minimization**: Query only required fields.
+- **Input Validation**: Sanitize all inputs (Zod/Yup).
+
+### C. Regulatory Compliance
+- **PHI Protection**: Encrypt PHI at rest/transit.
+- **Audit Trails**: Log sensitive access.
+- **Access Control**: Enforce RBAC.
+
+## 4. 🚨 AI SAFETY PROTOCOLS
+1. **NO DESTRUCTIVE ACTIONS** without confirmation.
+2. **DATA PRESERVATION** is priority.
+3. **NO "GASLIGHTING"**: Return TODOs, not fake success.
+4. **READ-ONLY FIRST**: Verify state before writes.
+
+---
+*Generated by ProdMoh Governance Engine*
